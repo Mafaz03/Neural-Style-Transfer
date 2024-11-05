@@ -8,9 +8,9 @@ from torchvision.utils import save_image
 from tqdm import tqdm
 
 original_image = load_image("batman.png")
-style_image = load_image("starry_night.png")
-# generated = original_image.clone().requires_grad_(True)
-generated = torch.randn(original_image.shape, device=config.DEVICE, requires_grad=True)
+style_image = load_image("starry_night.jpeg")
+generated = original_image.clone().requires_grad_(True)
+# generated = torch.randn(original_image.shape, device=config.DEVICE, requires_grad=True)
 
 model = VGG().to(config.DEVICE).eval()
 
